@@ -1,0 +1,1 @@
+dotnet script PortingNotesConverter.csx %* || pause
