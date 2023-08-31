@@ -1,1 +1,1 @@
-dotnet script PortingNotesParser.csx || pause
+dotnet script PortingNotesParser.csx %* || pause
