@@ -23,7 +23,7 @@ void LogWarning(string text)
 	Console.WriteLine(text);
 }
 
-var parseMultipleRegex = new Regex(@"(?<=^|\s*)(`([\s\S]+?)`\s*by\s*[\s\S]+?)\n(?=`[\s\S]+?`\s*by\s*|\s*$)", RegexOptions.Compiled);
+var parseMultipleRegex = new Regex(@"(?<=^|\s*)((?:#+[ ]+)?`([\s\S]+?)`\s*by\s*[\s\S]+?)\n(?=(?:#+[ ]+)?`[\s\S]+?`\s*by\s*|\s*$)", RegexOptions.Compiled);
 
 List<PortingNote> ParseMultiple(string input)
 {
@@ -40,12 +40,12 @@ List<PortingNote> ParseMultiple(string input)
 }
 
 var titleAndAuthorRegex = new Regex(
-	@"^\s*((`?)[\s\S]+?\2)\s*by\s*((\**)[^\r\n]+\4)",
+	@"^\s*(?:#+[ ]+)?((`?)[\s\S]+?\2)\s*by\s*((\**)[^\r\n]+\4)",
 	RegexOptions.Compiled
 );
 var fieldsRegex = new Regex(
-	@"(?<=[\r\n]|^)(\*+)([^\r\n]+?)(?:\1:|:\1)\s*([\s\S]+?)(?=\n\n|(\*+)[^\r\n]+?(?:\4:|:\4)|$)",
-	RegexOptions.Compiled
+	@"(?<=[\r\n]|^)(?:(\*+)|## )([^\r\n]+?)(?:\1:|:\1|\1\n+)\s*([\s\S]+?)(?=[\r\n]+|$)",
+	RegexOptions.Compiled | RegexOptions.ECMAScript | RegexOptions.Multiline | RegexOptions.IgnoreCase
 );
 var urlRegex = new Regex(
 	@"(?:http[s]?:\/\/)?github\.com\/tModLoader\/tModLoader\/(pull|issues|commit)\/(\w\w?\w?\w?\w?\w?\w?)",
@@ -76,11 +76,10 @@ PortingNote ParseSingle(string input)
 	foreach (Match match in fieldsMatches) {
 		string fieldName = match.Groups[2].Value.ToLower();
 		string fieldValue = match.Groups[3].Value.Trim();
+		string fieldValueLower = fieldValue.ToLower();
 
 		switch (fieldName) {
 			case "breakage":
-				string fieldValueLower = fieldValue.ToLower();
-	
 				note.Breakage = fieldValueLower switch {
 					_ when fieldValueLower.Contains("none") => Breakage.None,
 					_ when fieldValueLower.Contains("minimal") => Breakage.Minimal,
@@ -91,6 +90,45 @@ PortingNote ParseSingle(string input)
 				};
 
 				if (note.Breakage == Breakage.Unknown) {
+					LogWarning($"Unknown breakage level: '{fieldValue}'.");
+				}
+
+				break;
+			case "runtime breakage":
+				note.RuntimeBreakage = fieldValueLower switch {
+					_ when fieldValueLower.Contains("none") => RuntimeBreakage.None,
+					_ when fieldValueLower.Contains("unlikely") => RuntimeBreakage.Unlikely,
+					_ when fieldValueLower.Contains("likely") => RuntimeBreakage.Likely,
+					_ when fieldValueLower.Contains("guaranteed") => RuntimeBreakage.Guaranteed,
+					_ => RuntimeBreakage.Unknown,
+				};
+
+				if (note.RuntimeBreakage == RuntimeBreakage.Unknown) {
+					LogWarning($"Unknown breakage level: '{fieldValue}'.");
+				}
+
+				break;
+			case "source breakage":
+			case "source code breakage":
+			case "source-code breakage":
+				note.SourceCodeBreakage = fieldValueLower switch {
+					_ when fieldValueLower.Contains("none") => SourceCodeBreakage.None,
+					_ when fieldValueLower.Contains("fully covered") => SourceCodeBreakage.None,
+					_ when fieldValueLower.Contains("minimal") => SourceCodeBreakage.LowEffort,
+					_ when fieldValueLower.Contains("low") => SourceCodeBreakage.LowEffort,
+					_ when fieldValueLower.Contains("light") => SourceCodeBreakage.LowEffort,
+					_ when fieldValueLower.Contains("average") => SourceCodeBreakage.MediumEffort,
+					_ when fieldValueLower.Contains("medium") => SourceCodeBreakage.MediumEffort,
+					_ when fieldValueLower.Contains("high") => SourceCodeBreakage.HighEffort,
+					_ when fieldValueLower.Contains("heavy") => SourceCodeBreakage.HighEffort,
+					_ => SourceCodeBreakage.Unknown,
+				};
+
+				if (fieldValueLower.Contains("tmodporter")) {
+					note.SourceCodeBreakage |= SourceCodeBreakage.RunTModPorter;
+				}
+
+				if (note.SourceCodeBreakage == SourceCodeBreakage.Unknown) {
 					LogWarning($"Unknown breakage level: '{fieldValue}'.");
 				}
 
@@ -141,7 +179,7 @@ var outputJsonArray = new JArray();
 
 foreach (var note in notes) {
 	var noteObject = JObject.FromObject(note);
-	
+
 	outputJsonArray.Add(noteObject);
 }
 

@@ -65,6 +65,34 @@ void WriteNoteForDiscord(PortingNote note, StringBuilder sb)
 		sb.AppendLine($"**Breakage**: {color} - **{note.Breakage}**");
 	}
 
+	if (note.RuntimeBreakage != RuntimeBreakage.Unknown) {
+		string color = note.RuntimeBreakage switch {
+			RuntimeBreakage.None => "🟢",
+			RuntimeBreakage.Unlikely => "🟡",
+			RuntimeBreakage.Likely => "🟠",
+			RuntimeBreakage.Guaranteed => "🔴",
+			_ => "💀",
+		};
+
+		sb.AppendLine($"**Runtime Breakage**: {color} - **{note.RuntimeBreakage}**");
+	}
+
+	if (note.SourceCodeBreakage != SourceCodeBreakage.Unknown) {
+		(string prefix, string text) = note.SourceCodeBreakage switch {
+			SourceCodeBreakage.None => ("🟢", "None"),
+			SourceCodeBreakage.RunTModPorter => ("🟢🤖", "Fully covered by tModPorter"),
+			SourceCodeBreakage.LowEffortWithTModPorter => ("🟡🤖", "Light effort required; Partially covered by tModPorter"),
+			SourceCodeBreakage.LowEffort => ("🟡", "Light effort required; Not covered by tModPorter"),
+			SourceCodeBreakage.MediumEffortWithTModPorter => ("🟠🤖", "Medium effort required; Partially covered by tModPorter"),
+			SourceCodeBreakage.MediumEffort => ("🟠", "Medium effort required; Not covered by tModPorter"),
+			SourceCodeBreakage.HighEffortWithTModPorter => ("🔴🤖", "High effort required; Partially covered by tModPorter"),
+			SourceCodeBreakage.HighEffort => ("💀", "High effort required; Not covered by tModPorter"),
+			_ => ("❓", "Umm..."),
+		};
+
+		sb.AppendLine($"**Source-code Breakage**: {prefix} - **{text}**");
+	}
+
 	if (!string.IsNullOrWhiteSpace(note.Summary)) {
 		sb.AppendLine();
 		sb.AppendLine($"## Short Summary");
