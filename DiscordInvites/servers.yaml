@@ -1,0 +1,97 @@
+general:
+  - name: "Terraria's Official Discord Server"
+    url: "https://discord.gg/terraria"
+
+  - name: "Terraria Spriters' Guild Discord Server"
+    url: "https://discord.gg/7jPu2et"
+
+  - name: "Terraria Wiki's Discord Server"
+    url: "https://discord.gg/zZGmGqk"
+
+  - name: "(Unofficial) 64-bit tModLoader's Discord Server"
+    url: "https://discord.gg/DY8cx5T"
+    inactive: true
+
+mods:
+  - name: "Calamity Mod"
+    url: "https://discord.gg/9kXd2PG"
+
+  - name: "Thorium Mod"
+    url: "https://discord.gg/SW57rrC"
+
+  - name: "Jopojelly's Mods (Recipe Browser, Boss Checklist, Cheat Sheet, Hero's Mod, Summoners Association, etc)"
+    url: "http://discord.gg/VzYmqu6"
+
+  - name: "Fargo's Mutant Mod"
+    url: "https://discord.gg/Rgen4Vv"
+
+  - name: "Spirit Mod"
+    url: "https://discord.gg/YUFGbSccSZ"
+
+  - name: "AlchemistNPC"
+    url: "https://discord.gg/PTd7NJe"
+
+  - name: "absoluteAquarian's Mods (Magic Storage support and etc.)"
+    url: "https://discord.gg/FemPG7eev4"
+
+  - name: "Hamstar's Mods (Mod Helpers, etc.)"
+    url: "https://discord.gg/TKZZ6KY"
+    inactive: true
+
+  - name: "Terraria Overhaul"
+    url: "https://discord.gg/RNGq9N8"
+
+  - name: "Elements Awoken"
+    url: "https://discord.gg/ETJ6NBV"
+
+  - name: "JoostMod"
+    url: "https://discord.gg/W9XkT6s"
+    inactive: true
+
+  - name: "imkSushi's Mod"
+    url: "http://discord.gg/WK9DMWK"
+
+  - name: "Tremor Mod"
+    url: "https://discord.gg/JdQAwmT"
+    inactive: true
+
+  - name: "Shadows of Abaddon"
+    url: "https://discord.gg/qEb5cMr"
+    inactive: true
+
+  - name: "Qwerty's Bosses and Items"
+    url: "https://discord.gg/sxEz4aY"
+
+  - name: "The Enigma Mod"
+    url: "https://discord.gg/9T37nQB"
+    inactive: true
+
+  - name: "AFK's PETS and more"
+    url: "https://discord.gg/Wr44Hsy"
+
+  - name: "Leveled Mod"
+    url: "https://discord.gg/4ZUkCff"
+    inactive: true
+
+  - name: "The Stars Above"
+    url: "https://discord.gg/kFURRZZszD"
+
+  - name: "Wildlife"
+    url: "https://discord.gg/qwKWJqu"
+    inactive: true
+
+  - name: "Furniture, Food, and Fun"
+    url: "https://discord.gg/vDVEKNw"
+
+  - name: "Starlight River"
+    url: "https://discord.gg/NHGnsAwmFE"
+
+  - name: "Structure Helper"
+    url: "https://discord.gg/KFpCz5p688"
+
+  - name: "Luiafk Reborn (Unofficial Mod)"
+    url: "https://discord.gg/TYDjGyEbp6"
+
+  - name: "SUPER! Studios (Unofficial Addons for Dragon Ball Terraria)"
+    url: "https://discord.gg/superstudios"
+
