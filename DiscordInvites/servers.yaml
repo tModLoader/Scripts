@@ -1,97 +1,100 @@
 general:
-  - name: "Terraria's Official Discord Server"
-    url: "https://discord.gg/terraria"
+  - title: "Terraria's Official Discord Server"
+    discord: "https://discord.gg/terraria"
 
-  - name: "Terraria Spriters' Guild Discord Server"
-    url: "https://discord.gg/7jPu2et"
+  - title: "Terraria Spriters' Guild Discord Server"
+    discord: "https://discord.gg/7jPu2et"
 
-  - name: "Terraria Wiki's Discord Server"
-    url: "https://discord.gg/zZGmGqk"
+  - title: "Terraria Wiki's Discord Server"
+    discord: "https://discord.gg/zZGmGqk"
 
-  - name: "(Unofficial) 64-bit tModLoader's Discord Server"
-    url: "https://discord.gg/DY8cx5T"
+  - title: "(Unofficial) 64-bit tModLoader's Discord Server"
+    discord: "https://discord.gg/DY8cx5T"
     inactive: true
 
 mods:
-  - name: "Calamity Mod"
-    url: "https://discord.gg/9kXd2PG"
+  - title: "absoluteAquarian's Mods (Magic Storage support and etc.)"
+    discord: "https://discord.gg/FemPG7eev4"
 
-  - name: "Thorium Mod"
-    url: "https://discord.gg/SW57rrC"
+  - title: "AFK's PETS and more"
+    discord: "https://discord.gg/Wr44Hsy"
 
-  - name: "Jopojelly's Mods (Recipe Browser, Boss Checklist, Cheat Sheet, Hero's Mod, Summoners Association, etc)"
-    url: "http://discord.gg/VzYmqu6"
+  - title: "AlchemistNPC"
+    discord: "https://discord.gg/PTd7NJe"
 
-  - name: "Fargo's Mutant Mod"
-    url: "https://discord.gg/Rgen4Vv"
+  - title: "Calamity Mod"
+    discord: "https://discord.gg/calamity"
 
-  - name: "Spirit Mod"
-    url: "https://discord.gg/YUFGbSccSZ"
+  - title: "Elements Awoken"
+    discord: "https://discord.gg/ETJ6NBV"
 
-  - name: "AlchemistNPC"
-    url: "https://discord.gg/PTd7NJe"
+  - title: "Fargo's Mutant and Souls Mods"
+    discord: "https://discord.gg/Rgen4Vv"
 
-  - name: "absoluteAquarian's Mods (Magic Storage support and etc.)"
-    url: "https://discord.gg/FemPG7eev4"
+  - title: "Furniture, Food, and Fun"
+    discord: "https://discord.gg/vDVEKNw"
 
-  - name: "Hamstar's Mods (Mod Helpers, etc.)"
-    url: "https://discord.gg/TKZZ6KY"
+  - title: "Hamstar's Mods (Mod Helpers, etc.)"
+    discord: "https://discord.gg/TKZZ6KY"
     inactive: true
 
-  - name: "Terraria Overhaul"
-    url: "https://discord.gg/RNGq9N8"
+  - title: "imkSushi's Mod"
+    discord: "http://discord.gg/WK9DMWK"
+    
+  - title: "Infernum Mod"
+    discord: "https://discord.gg/S9duFWAnzD"
 
-  - name: "Elements Awoken"
-    url: "https://discord.gg/ETJ6NBV"
-
-  - name: "JoostMod"
-    url: "https://discord.gg/W9XkT6s"
+  - title: "JoostMod"
+    discord: "https://discord.gg/W9XkT6s"
     inactive: true
 
-  - name: "imkSushi's Mod"
-    url: "http://discord.gg/WK9DMWK"
+  - title: "Jopojelly's Mods (Recipe Browser, Boss Checklist, Cheat Sheet, Hero's Mod, Summoners Association, etc)"
+    discord: "http://discord.gg/VzYmqu6"
 
-  - name: "Tremor Mod"
-    url: "https://discord.gg/JdQAwmT"
+  - title: "Leveled Mod"
+    discord: "https://discord.gg/4ZUkCff"
     inactive: true
 
-  - name: "Shadows of Abaddon"
-    url: "https://discord.gg/qEb5cMr"
+  - title: "Luiafk Reborn (Unofficial Mod)"
+    discord: "https://discord.gg/TYDjGyEbp6"
+
+  - title: "Qwerty's Bosses and Items"
+    discord: "https://discord.gg/sxEz4aY"
+
+  - title: "Shadows of Abaddon"
+    discord: "https://discord.gg/qEb5cMr"
     inactive: true
 
-  - name: "Qwerty's Bosses and Items"
-    url: "https://discord.gg/sxEz4aY"
+  - title: "Spirit Mod"
+    discord: "https://discord.gg/YUFGbSccSZ"
 
-  - name: "The Enigma Mod"
-    url: "https://discord.gg/9T37nQB"
+  - title: "Starlight River"
+    discord: "https://discord.gg/NHGnsAwmFE"
+
+  - title: "Structure Helper"
+    discord: "https://discord.gg/KFpCz5p688"
+
+  - title: "SUPER! Studios (Unofficial Addons for Dragon Ball Terraria)"
+    discord: "https://discord.gg/superstudios"
+
+  - title: "Terraria Overhaul"
+    discord: "https://discord.gg/RNGq9N8"
+
+  - title: "The Enigma Mod"
+    discord: "https://discord.gg/9T37nQB"
     inactive: true
 
-  - name: "AFK's PETS and more"
-    url: "https://discord.gg/Wr44Hsy"
+  - title: "The Stars Above"
+    discord: "https://discord.gg/kFURRZZszD"
 
-  - name: "Leveled Mod"
-    url: "https://discord.gg/4ZUkCff"
+  - title: "Thorium Mod"
+    discord: "https://discord.gg/SW57rrC"
+
+  - title: "Tremor Mod"
+    discord: "https://discord.gg/JdQAwmT"
     inactive: true
 
-  - name: "The Stars Above"
-    url: "https://discord.gg/kFURRZZszD"
-
-  - name: "Wildlife"
-    url: "https://discord.gg/qwKWJqu"
+  - title: "Wildlife"
+    discord: "https://discord.gg/qwKWJqu"
     inactive: true
-
-  - name: "Furniture, Food, and Fun"
-    url: "https://discord.gg/vDVEKNw"
-
-  - name: "Starlight River"
-    url: "https://discord.gg/NHGnsAwmFE"
-
-  - name: "Structure Helper"
-    url: "https://discord.gg/KFpCz5p688"
-
-  - name: "Luiafk Reborn (Unofficial Mod)"
-    url: "https://discord.gg/TYDjGyEbp6"
-
-  - name: "SUPER! Studios (Unofficial Addons for Dragon Ball Terraria)"
-    url: "https://discord.gg/superstudios"
 
