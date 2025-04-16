@@ -1,9 +1,9 @@
 let data = open servers.yaml
 
-def serverList [servers: list] {
+def serverList [servers: list, --sort] {
     $servers
         | where {|x| not ("inactive" in $x)}
-        | sort-by -i "title"
+        | (if $sort { sort-by -i "title" } else {})
         | each {|x| $"**($x.title)**\n- <($x.discord   )>"}
         | str join "\n"
 }
@@ -14,5 +14,5 @@ $'
 # Mod-specific Servers
 > To suggest a popular mod server for this list, please see <#1348388251693617173> under <#1118000566061244546>.
 
-(serverList $data.mods)
+(serverList $data.mods --sort)
 '

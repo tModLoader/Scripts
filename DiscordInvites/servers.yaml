@@ -22,6 +22,9 @@ mods:
   - title: "AlchemistNPC"
     discord: "https://discord.gg/PTd7NJe"
 
+  - title: "Calamity: Fables"
+    discord: "https://discord.gg/cJvy4cUXna"
+
   - title: "Calamity Mod"
     discord: "https://discord.gg/calamity"
 
@@ -43,6 +46,7 @@ mods:
     
   - title: "Infernum Mod"
     discord: "https://discord.gg/S9duFWAnzD"
+    inactive: true
 
   - title: "JoostMod"
     discord: "https://discord.gg/W9XkT6s"
@@ -76,6 +80,9 @@ mods:
 
   - title: "SUPER! Studios (Unofficial Addons for Dragon Ball Terraria)"
     discord: "https://discord.gg/superstudios"
+
+  - title: "Terraria Origins"
+    discord: "https://discord.gg/NK7jERXsTN"
 
   - title: "Terraria Overhaul"
     discord: "https://discord.gg/RNGq9N8"
