@@ -1,4 +1,7 @@
-**/*.md
-**/*.txt
-**/*.json
-**/*.hjson
+PortingNotes/**/*.md
+PortingNotes/**/*.txt
+PortingNotes/**/*.json
+PortingNotes/**/*.hjson
+**/bin/
+**/obj/
+**/.vs/
