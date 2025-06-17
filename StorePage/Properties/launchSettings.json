@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Screenshots": {
+      "commandName": "Project",
+      "workingDirectory": "."
+    }
+  }
+}

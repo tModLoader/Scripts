@@ -2,6 +2,10 @@ PortingNotes/**/*.md
 PortingNotes/**/*.txt
 PortingNotes/**/*.json
 PortingNotes/**/*.hjson
+StorePage/inputs/
+StorePage/logos/
+StorePage/outputs/
+StorePage/tests/
 **/bin/
 **/obj/
 **/.vs/

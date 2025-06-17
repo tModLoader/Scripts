@@ -1,0 +1,15 @@
+mods:
+  SpookyMod:
+    text: "Spooky Mod"
+  ModOfRedemption:
+    #text: "Mod Of Redemption"
+  TerrariaOverhaul:
+    #text: "Terraria Overhaul"
+  FargosSouls:
+    text: "Fargo's Souls"
+  QualityOfTerraria:
+    text: "Quality of Terraria"
+  StarsAbove:
+    #text: "The Stars Above"
+  Remnants:
+    text: "Remnants"
